@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>House List</title>
+</head>
+<body>
+<h1>House List</h1>
+<p>
+Here are the homes that match your search criteria:
+</p>
+<br>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Price</th>
+<th>Bedrooms</th>
+<th>Bathrooms</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+{% for property in properties %}
+<tr>
+<td>{{ property.address }}</td>
+<td>{{ property.price }}</td>
+<td>{{ property.num_bedrooms }}</td>
+<td>{{ property.num_bathrooms }}</td>
+<td><a href="/house_details/{{ property.property_id }}">Details</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
+
