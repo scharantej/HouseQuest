@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>House Search</title>
+</head>
+<body>
+<h1>Search for Homes</h1>
+<p>
+Enter your search criteria below to find homes that match your preferences.
+</p>
+<br>
+<form method="POST" action="/house_search">
+<label for="location">Location:</label>
+<input type="text" name="location" id="location">
+<br>
+<label for="min_price">Minimum Price:</label>
+<input type="number" name="min_price" id="min_price">
+<br>
+<label for="max_price">Maximum Price:</label>
+<input type="number" name="max_price" id="max_price">
+<br>
+<label for="num_bedrooms">Number of Bedrooms:</label>
+<input type="number" name="num_bedrooms" id="num_bedrooms">
+<br>
+<label for="num_bathrooms">Number of Bathrooms:</label>
+<input type="number" name="num_bathrooms" id="num_bathrooms">
+<br>
+<br>
+<input type="submit" value="Search">
+</form>
+</body>
+</html>
+
+
