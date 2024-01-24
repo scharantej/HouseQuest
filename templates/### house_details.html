@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>House Details</title>
+</head>
+<body>
+<h1>House Details</h1>
+<p>
+Here are the details of the property you selected:
+</p>
+<br>
+<ul>
+<li>Address: {{ property_details.address }}</li>
+<li>Price: {{ property_details.price }}</li>
+<li>Bedrooms: {{ property_details.num_bedrooms }}</li>
+<li>Bathrooms: {{ property_details.num_bathrooms }}</li>
+<li>Description: {{ property_details.description }}</li>
+</ul>
+<br>
+<h2>Photo Gallery</h2>
+<div id="photo-gallery">
+{% for photo in property_details.photos %}
+<img src="{{ photo.url }}" alt="{{ photo.caption }}">
+{% endfor %}
+</div>
+<br>
+<h2>Contact Agent</h2>
+<form method="POST" action="/contact">
+<label for="name">Name:</label>
+<input type="text" name="name" id="name">
+<br>
+<label for="email">Email:</label>
+<input type="email" name="email" id="email">
+<br>
+<label for="message">Message:</label>
+<textarea name="message" id="message"></textarea>
+<br>
+<br>
+<input type="submit" value="Send">
+</form>
+</body>
+</html>
+
+
